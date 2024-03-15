@@ -1,20 +1,13 @@
 package operands.rightOperand;
 
-import operands.inputLogic.InputLogic;
-import operands.type.OperandsType;
+import java.util.Scanner;
 
 public class RightOperand {
-  private int operand;
-  private final String RIGHT = OperandsType.RIGHT.getOperandType();
+  public int printRightOperandMessage() {
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("오른쪽에 들어갈 피연산자 숫자: ");
+    int operand = scanner.nextInt();
 
-  public RightOperand() {
-    InputLogic inputRightOperandLogic = new InputLogic();
-    int rightOperand = (Integer) inputRightOperandLogic.inputOperand(RIGHT).getLeftHands();
-
-    this.operand = rightOperand;
-  }
-
-  public int getRightOperand() {
-    return this.operand;
+    return operand;
   }
 }
