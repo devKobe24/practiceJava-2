@@ -1,33 +1,30 @@
-import calculatorLogic.CalculatorLogic;
-import message.Message;
+import java.util.Scanner;
 import message.calculatorOn.OnMessage;
+import message.calculatorOn.StartMessage;
 import operands.enumeration.Hands;
-import operators.Operator;
-import operators.Operators;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
 
   public static void main(String[] args) {
+    StartMessage startMessage = new StartMessage();
+    startMessage.calculatorStart();
+
     OnMessage leftHandMessage = new OnMessage(Hands.LEFT);
     OnMessage rightHandMessage = new OnMessage(Hands.RIGHT);
 
-    leftHandMessage.calculatorStart();
+    leftHandMessage.inputOperand(Hands.LEFT);
 
-    Hands leftHand = leftHandMessage.inputOperandMessage();
-    Hands rightHand = rightHandMessage.inputOperandMessage();
+    Scanner scanner = new Scanner(System.in);
+    String leftOperand = scanner.next();
 
-    CalculatorLogic leftCalculatorLogic = new CalculatorLogic(leftHand);
-    CalculatorLogic rightCalculatorLogic = new CalculatorLogic(rightHand);
+    rightHandMessage.inputOperand(Hands.RIGHT);
 
-    leftCalculatorLogic.inputOperand();
-    rightCalculatorLogic.inputOperand();
+    String rightOperand = scanner.next();
 
-    Operator operator = new Operator();
-    String userInputOperator = operator.inputOperator();
 
-    leftCalculatorLogic.operation(userInputOperator);
-    rightCalculatorLogic.operation(userInputOperator);
+
+
   }
 }

@@ -4,7 +4,8 @@ public enum Operators {
   PLUS("+"),
   MINUS("-"),
   DIVIDE("/"),
-  MUTIPLY("*");
+  MUTIPLY("*"),
+  DEFAULT("");
 
   private String operator;
 

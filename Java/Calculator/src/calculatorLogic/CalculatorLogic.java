@@ -29,12 +29,12 @@ public class CalculatorLogic {
     }
   }
 
-  public void operation(String operator) {
-    switch (operator) {
-      case "+":
-        Plus plus = new Plus();
-        plus.plusOperation(this.leftOperand, this.rightOperand);
-        break;
-    }
-  }
+//  public void operation(String operator) {
+//    switch (operator) {
+//      case "+":
+//        Plus plus = new Plus();
+//        plus.plusOperation(this.leftOperand, this.rightOperand);
+//        break;
+//    }
+//  }
 }
