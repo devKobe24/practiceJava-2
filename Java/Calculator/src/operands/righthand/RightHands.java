@@ -3,9 +3,13 @@ package operands.righthand;
 import operands.Operand;
 
 public class RightHands extends Operand {
+  private int operand;
 
-  @Override
-  public int intputNumber() {
-    return super.intputNumber();
+  public RightHands(int operand) {
+    this.operand = operand;
+  }
+
+  public int getOperand() {
+    return this.operand;
   }
 }

@@ -1,7 +1,11 @@
 import java.util.Scanner;
 import message.calculatorOn.OnMessage;
+import message.calculatorOn.OperatorChoiceMessage;
 import message.calculatorOn.StartMessage;
 import operands.enumeration.Hands;
+import operands.lefthand.LeftHands;
+import operands.righthand.RightHands;
+import operators.Operators;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -17,14 +21,18 @@ public class Main {
     leftHandMessage.inputOperand(Hands.LEFT);
 
     Scanner scanner = new Scanner(System.in);
-    String leftOperand = scanner.next();
+    int leftOperand = scanner.nextInt();
+    LeftHands leftHands = new LeftHands(leftOperand);
+    leftOperand = leftHands.getOperand();
 
     rightHandMessage.inputOperand(Hands.RIGHT);
+    int rightOperand = scanner.nextInt();
+    RightHands rightHands = new RightHands(rightOperand);
+    rightOperand = rightHands.getOperand();
 
-    String rightOperand = scanner.next();
-
-
-
-
+    OperatorChoiceMessage operatorChoiceMessage = new OperatorChoiceMessage(leftOperand, rightOperand);
+    operatorChoiceMessage.startOperator();
+    String operator = scanner.next();
+    operatorChoiceMessage.inputOperator(operator);
   }
 }
