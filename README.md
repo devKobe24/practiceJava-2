@@ -1,6 +1,6 @@
 # Java Study 기본편
 
-> `'김영한 강사님'`의 `'신전 자바 - 기본편'` 강의 성장로그 입니다.<br>
+> `'김영한 강사님'`의 `'실전 자바 - 기본편'` 강의 성장로그 입니다.<br>
 > This is the growth log of `Instructor Kim Young-han's` `'Practical Java - Basic Course'`.
 
 ## 목차 📚
